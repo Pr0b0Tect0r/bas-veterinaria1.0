@@ -45,7 +45,6 @@
         "react-swipeable-views": "^0.13.3",
         "recharts": "^2.0.0-beta.1"
     },
-    "homepage": "https://programador-gnt.github.io/bas-veterinaria1.0/",
     "scripts": {
         "g": "react-scripts start",
         "build": "react-scripts build",
