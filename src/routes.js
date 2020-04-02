@@ -13,7 +13,12 @@ const Cajaybancos = React.lazy(() => import('./Componentes/Cajaybancos'))
 const Movimiento = React.lazy(() => import('./Componentes/Movimiento'))
 const Cronograma = React.lazy(() => import('./Componentes/Cronograma'))
 const Planilla = React.lazy(() => import('./Componentes/Planilla'))
-
+const Tipomovimiento = React.lazy(() => import('./Componentes/Tipomovimiento'))
+const Almacen = React.lazy(() => import('./Componentes/Almacen'))
+const Valor = React.lazy(() => import('./Componentes/Valor'))
+const Cierre = React.lazy(() => import('./Componentes/Cierre'))
+const Kardex = React.lazy(() => import('./Componentes/Kardex'))
+const Inventario = React.lazy(() => import('./Componentes/Inventario'))
 
 const routes = [
 	{ id: '0', path: '/inicio', exact: true, name: 'Inicio', component: Inicio },
@@ -28,7 +33,13 @@ const routes = [
 	{ id: '9', path: '/caja_y_bancos', exact: true, name: 'Caja y bancos', component: Cajaybancos },
 	{ id: '10', path: '/movimiento', exact: true, name: 'Movimientos de cuentas', component: Movimiento },
 	{ id: '11', path: '/cronograma', exact: true, name: 'Cronograma de pagos', component: Cronograma },
-	{ id: '12', path: '/planilla', exact: true, name: 'Planilla de cobranza', component: Planilla }
+	{ id: '12', path: '/planilla', exact: true, name: 'Planilla de cobranza', component: Planilla },
+	{ id: '13', path: '/tipomovimiento', exact: true, name: 'Tipo de movimiento', component: Tipomovimiento },
+	{ id: '14', path: '/almacen', exact: true, name: 'Almacen', component: Almacen },
+	{ id: '15', path: '/valor', exact: true, name: 'Valorización de inventario', component: Valor },
+	{ id: '16', path: '/cierre', exact: true, name: 'Cierre mensual', component: Cierre },
+	{ id: '17', path: '/kardex', exact: true, name: 'Kardex', component: Kardex },
+	{ id: '18', path: '/inventario', exact: true, name: 'Inventario', component: Inventario }
 ];
 
 export default routes;
