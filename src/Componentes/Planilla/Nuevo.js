@@ -66,6 +66,19 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: theme.spacing(2),
 		width: '100%'
 	},
+	buttons: {
+		display: 'flex',
+		justifyContent: 'flex-end',
+	},
+	contenedorLista: {
+		display: 'flex',
+		justifyContent: 'flex-end',
+		marginTop: theme.spacing(1)
+	},
+	contenedorLista1: {
+		display: 'flex',
+		justifyContent: 'flex-start'
+	}
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -525,7 +538,7 @@ export default function TablaMovimiento() {
 					<Button variant='outlined' color='primary' className={classes.button2} onClick={() => alert('agrega')}>agrega</Button>
 				</Grid>
 				<Grid item xs={12} sm={2}>
-					<Button variant='outlined' className={classes.button2} color='primary' onClick={() => alert('modifica')}>modifica</Button>
+					<Button variant='outlined' className={classes.button2} color='primary' onClick={() => setOpenDialog(true)}>modifica</Button>
 				</Grid>
 				<Grid item xs={12} sm={2}>
 					<Button variant='outlined' className={classes.button2} color='primary' onClick={() => alert('quitar')}>quitar</Button>
@@ -558,6 +571,15 @@ export default function TablaMovimiento() {
 						{ title: 'Glosa', field: 'glosa' }
 					]}
 					data={detalles}
+					actions={[
+						{
+							icon: 'search',
+							tooltip: 'Ver',
+							onClick: (event, rowData) => {
+								setOpenDialog(true)
+							}
+						},
+					]}
 					localization={{
 						pagination: {
 							labelDisplayedRows: '{from}-{to} de {count}'
@@ -581,6 +603,20 @@ export default function TablaMovimiento() {
 					}}
 				/>
 			</Zoom>
+			<Grid container style={{marginTop: '2px'}}>
+				<Grid item xs={6} className={classes.contenedorLista1}>
+					<Typography variant='body1'>{detalles[0].cta}</Typography>
+				</Grid>
+				<Grid item xs={6} className={classes.contenedorLista}>
+					<TextField disabled value='10,123,456' label='S/' />
+				</Grid>
+				<Grid item xs={6} className={classes.contenedorLista1}>
+					<Typography variant='body1'>{`${detalles[0].cliente} - CERRADA`}</Typography>
+				</Grid>
+				<Grid item xs={6} className={classes.contenedorLista}>
+					<TextField disabled value='5,5637,89' label='US$%' />
+				</Grid>
+			</Grid>
 		</>
 	);
 }

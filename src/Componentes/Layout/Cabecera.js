@@ -404,9 +404,9 @@ function Cabecera() {
 					</ListItem>
 					<Collapse in={abrirMenu2} timeout="auto" unmountOnExit>
 						<List component="div" disablePadding>
-							<Link to='/operaciones' style={{ textDecoration: 'none', color: 'inherit' }}>
+							<Link to='/tipomovimiento' style={{ textDecoration: 'none', color: 'inherit' }}>
 								<ListItem button className={classes.nested}>
-									<ListItemText primary="Operaciones" />
+									<ListItemText primary="Tipo de movimiento" />
 								</ListItem>
 							</Link>
 							<Link to='/almacen' style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -419,14 +419,24 @@ function Cabecera() {
 									<ListItemText primary="Comprobante" />
 								</ListItem>
 							</Link>
-							<Link to='/valorizaciondeinventario' style={{ textDecoration: 'none', color: 'inherit' }}>
+							<Link to='/valor' style={{ textDecoration: 'none', color: 'inherit' }}>
 								<ListItem button className={classes.nested}>
 									<ListItemText primary="Valorización de inventario" />
 								</ListItem>
 							</Link>
-							<Link to='/cierremensual' style={{ textDecoration: 'none', color: 'inherit' }}>
+							<Link to='/cierre' style={{ textDecoration: 'none', color: 'inherit' }}>
 								<ListItem button className={classes.nested}>
 									<ListItemText primary="Cierre mensual" />
+								</ListItem>
+							</Link>
+							<Link to='/kardex' style={{ textDecoration: 'none', color: 'inherit' }}>
+								<ListItem button className={classes.nested}>
+									<ListItemText primary="Kardex" />
+								</ListItem>
+							</Link>
+							<Link to='/inventario' style={{ textDecoration: 'none', color: 'inherit' }}>
+								<ListItem button className={classes.nested}>
+									<ListItemText primary="Inventario" />
 								</ListItem>
 							</Link>
 						</List>

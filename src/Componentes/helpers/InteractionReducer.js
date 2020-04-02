@@ -135,6 +135,62 @@ export function interactionFunctionReducer(state, [action, path, funcion, funcio
             return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
 
 
+        case 'listaTipoMovimiento':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'tipoMovimientoInfo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'tipoMovimientoNuevo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'listaAlmacen':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'almacenInfo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'almacenNuevo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+
+        case 'listaValor':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'valorInfo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'valorNuevo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'listaCierre':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'cierreInfo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'cierreNuevo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'listaKardex':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'kardexInfo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'kardexNuevo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+
+        case 'listaInventario':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'inventarioInfo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
+        case 'inventarioNuevo':
+            return {...state, formContent: { path: path, funcion: funcion, funcionSecundaria: funcionSecundaria }, acciones: payload };
+
 
         default:
             return state;
