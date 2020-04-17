@@ -85,22 +85,23 @@ function Layout() {
 				<main className={classes.root}>
 					{interactions.formContent.path === '/inicio' ?
 						null : interactions.formContent.path === '/agenda' ? null
-							: <SpeedDial
-								ariaLabel="Speedial"
-								className={classes.speedDial}
-								icon={<SpeedDialIcon />}
-								onClick={() => setOpen(!open)}
-								open={open}>
-								{interactions.acciones.map((action, index) => (
-									<SpeedDialAction
-										tooltipOpen
-										key={index}
-										icon={action.name === 'Guardar' ? <SaveOutlinedIcon /> : action.name === 'Volver' ? <ArrowBackOutlinedIcon /> : action.name === 'Nuevo' ? <PetsOutlinedIcon /> : action.name === 'Table' ? <TableChartOutlinedIcon /> : action.name === 'Tarjeta' ? <WidgetsOutlinedIcon /> : action.name === 'Imprimir' ? <PrintOutlinedIcon /> : action.name === 'Excel' ? <ReceiptOutlinedIcon /> : ''}
-										tooltipTitle={action.name}
-										onClick={evt => preventActionClickClose(evt, action)}
-									/>
-								))}
-							</SpeedDial>}
+							: interactions.formContent.path === '/acercade' ? null
+								: <SpeedDial
+									ariaLabel="Speedial"
+									className={classes.speedDial}
+									icon={<SpeedDialIcon />}
+									onClick={() => setOpen(!open)}
+									open={open}>
+									{interactions.acciones.map((action, index) => (
+										<SpeedDialAction
+											tooltipOpen
+											key={index}
+											icon={action.name === 'Guardar' ? <SaveOutlinedIcon /> : action.name === 'Volver' ? <ArrowBackOutlinedIcon /> : action.name === 'Nuevo' ? <PetsOutlinedIcon /> : action.name === 'Table' ? <TableChartOutlinedIcon /> : action.name === 'Tarjeta' ? <WidgetsOutlinedIcon /> : action.name === 'Imprimir' ? <PrintOutlinedIcon /> : action.name === 'Excel' ? <ReceiptOutlinedIcon /> : ''}
+											tooltipTitle={action.name}
+											onClick={evt => preventActionClickClose(evt, action)}
+										/>
+									))}
+								</SpeedDial>}
 					<Suspense>
 						<Switch>
 							{routes.map((route) => {

@@ -19,6 +19,7 @@ const Valor = React.lazy(() => import('./Componentes/Valor'))
 const Cierre = React.lazy(() => import('./Componentes/Cierre'))
 const Kardex = React.lazy(() => import('./Componentes/Kardex'))
 const Inventario = React.lazy(() => import('./Componentes/Inventario'))
+const Acercade = React.lazy(() => import('./Componentes/Acercade'))
 
 const routes = [
 	{ id: '0', path: '/inicio', exact: true, name: 'Inicio', component: Inicio },
@@ -39,7 +40,8 @@ const routes = [
 	{ id: '15', path: '/valor', exact: true, name: 'Valorización de inventario', component: Valor },
 	{ id: '16', path: '/cierre', exact: true, name: 'Cierre mensual', component: Cierre },
 	{ id: '17', path: '/kardex', exact: true, name: 'Kardex', component: Kardex },
-	{ id: '18', path: '/inventario', exact: true, name: 'Inventario', component: Inventario }
+	{ id: '18', path: '/inventario', exact: true, name: 'Inventario', component: Inventario },
+	{ id: '19', path: '/acercade', exact: true, name: 'Acerca de', component: Acercade }
 ];
 
 export default routes;
